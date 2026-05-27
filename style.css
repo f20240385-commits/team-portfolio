@@ -2,20 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
 }
 
 header {
-    background-color: #222;
-    color: white;
     text-align: center;
-    padding: 40px;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
 }
 
 nav {
-    background-color: #444;
     text-align: center;
     padding: 15px;
+    background-color: rgba(0,0,0,0.3);
 }
 
 nav a {
@@ -23,28 +31,63 @@ nav a {
     text-decoration: none;
     margin: 15px;
     font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffd5;
 }
 
 section {
-    padding: 30px;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 .card img {
-    width: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    margin-bottom: 15px;
+    background: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
 }
 
 footer {
-    background-color: #222;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 40px;
 }
