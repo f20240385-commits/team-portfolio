@@ -1,94 +1,169 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-    line-height: 1.6;
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#111827,#0f172a);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    color:white;
 }
 
-header {
-    text-align: center;
-    padding: 80px 20px;
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-header h1 {
-    font-size: 60px;
-    margin-bottom: 10px;
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-header p {
-    font-size: 22px;
-    color: #cbd5e1;
+header h1{
+    font-size:80px;
+    font-weight:700;
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-nav {
-    background: rgba(255,255,255,0.05);
-    text-align: center;
-    padding: 15px;
-    position: sticky;
-    top: 0;
+header p{
+    margin-top:20px;
+    font-size:24px;
+    color:#cbd5e1;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-size: 18px;
-    transition: 0.3s;
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:center;
+    padding:18px;
 }
 
-nav a:hover {
-    color: #38bdf8;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:17px;
+    transition:0.3s;
 }
 
-.container {
-    width: 85%;
-    margin: auto;
-    padding: 50px 0;
+nav a:hover{
+    color:#38bdf8;
+    transform:scale(1.1);
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 40px;
+section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+    color:#38bdf8;
 }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-    transition: 0.3s;
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:35px;
+    transition:0.4s;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #38bdf8;
+.card:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 15px 40px rgba(56,189,248,0.25);
 }
 
-.card p {
-    margin-bottom: 10px;
+.card h3{
+    margin-bottom:18px;
+    font-size:26px;
+    color:#818cf8;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: rgba(255,255,255,0.05);
-    margin-top: 40px;
+.card p{
+    margin-bottom:12px;
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill-box{
+    background:rgba(255,255,255,0.08);
+    padding:25px 35px;
+    border-radius:18px;
+    backdrop-filter:blur(15px);
+    transition:0.3s;
+}
+
+.skill-box:hover{
+    transform:scale(1.08);
+    background:rgba(56,189,248,0.15);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    margin-top:50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+footer p{
+    color:#cbd5e1;
+    letter-spacing:1px;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:55px;
+    }
+
+    header p{
+        font-size:18px;
+    }
+
+    h2{
+        font-size:35px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+    }
 }
